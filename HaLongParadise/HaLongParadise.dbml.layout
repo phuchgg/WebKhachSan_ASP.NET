@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.25" name="HaLongParadise">
+  <DataContextMoniker Name="/HaLongParadiseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d07e6ded-8315-483c-af4b-0de068ac0074" absoluteBounds="6.25, 1.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/HaLongParadiseDataContext/ImageAlbum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab01aca7-43c6-427c-b335-5eb42216d48f" absoluteBounds="6.265, 2.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29cb7038-d057-487a-9131-a3c5cbf88d3b" absoluteBounds="0.75, 2.375, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/HaLongParadiseDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecc9d4a7-52c2-4708-9011-ba2599da3e5b" absoluteBounds="0.765, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cfee3bf-27b3-41c8-b27d-97911ef332c7" absoluteBounds="3.5, 1, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/HaLongParadiseDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8757032-8039-430e-8eee-bf3dbc88008c" absoluteBounds="3.515, 1.46, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e222d763-d827-47c7-a22a-ecf34246504b" absoluteBounds="0.75, 6.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HaLongParadiseDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77a3570c-6fd6-4c77-87c9-07fef1ba5227" absoluteBounds="0.765, 7.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.04890055338542); (6.25 : 3.04890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HaLongParadiseDataContext/Category/Category_ImageAlbum" />
+      <nodes>
+        <classShapeMoniker Id="7cfee3bf-27b3-41c8-b27d-97911ef332c7" />
+        <classShapeMoniker Id="d07e6ded-8315-483c-af4b-0de068ac0074" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.06814697265625); (3.5 : 3.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HaLongParadiseDataContext/Account/Account_Category" />
+      <nodes>
+        <classShapeMoniker Id="29cb7038-d057-487a-9131-a3c5cbf88d3b" />
+        <classShapeMoniker Id="7cfee3bf-27b3-41c8-b27d-97911ef332c7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

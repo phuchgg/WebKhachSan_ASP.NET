@@ -1,0 +1,368 @@
+﻿/*2b2c2e ghi
+    f6bd22 vàng
+    e5e5e5 line
+    */
+
+/*Định nghĩa chung*/
+body {
+    font-family: Tahoma, Arial;
+    font-size: 13px;
+    color: #666666;
+    min-width: 960px;
+    line-height: 18px;
+    margin: 0;
+    letter-spacing: 0px;
+    background: url("/images/bg.jpg");
+    text-align: justify;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+}
+
+.main {
+    width: 970px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    padding:0 4px;
+}
+
+img {
+    border: none;
+}
+
+.btn_orange {
+    width: 101px;
+    height: 30px;
+    background: url("/images/bg_button.png");
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #ea9804;
+    border:0;
+}
+
+    .btn_orange:hover {
+        background: url("/images/bg_button_hover.png");
+    }
+
+textbox {
+    height:25px;
+}
+/*======================================Slide================================================*/
+.slide_box {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 3px gray;
+    margin-top: -30px;
+    overflow: hidden;
+}
+.slide_next {
+    background: url("/images/ic_back.jpg") no-repeat;
+    height: 35px;
+    width: 22px;
+    margin-left: 885px;
+    margin-top: -95px;
+    position: absolute;
+    float:right;
+}
+.slide_back {
+    background: url("/images/ic_next.jpg") no-repeat;
+    height: 35px;
+    width: 22px;
+    margin-left: 60px;
+    margin-top: -95px;
+    position: absolute;
+    float:left;
+}
+/*=======================================Content==============================================*/
+.content {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 3px gray;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Times New Roman', Tahoma, Arial;
+    font-size: 24px;
+    color: #f6bd22;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    clear:both;
+    text-transform:uppercase;
+}
+/*detail*/
+.detail_box {
+    clear: both;
+    overflow: hidden;
+    padding-top: 40px;
+}
+.button_room {
+    width: 206px;
+    height: 32px;
+    background: url("/images/btn_room.png");
+    float: right;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+    padding-left:35px;
+    font-weight:bold;
+    text-transform:uppercase;
+    float: left;
+    margin-left:60px;
+    margin-top:30px;
+}
+
+    .button_room:hover {
+        background: url("/images/btn_room2.png");
+        cursor:pointer;
+    }
+/*about paradise*/
+.about_box {
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.about_img {
+    margin-top:40px;
+    width: 250px;
+    height: 185px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 3px gray;
+    float:left;
+    margin-bottom:10px;
+}
+
+.about_text {
+    margin-top:40px;
+    width: 625px;
+    overflow: hidden;
+    float:left;
+    margin-left:30px;
+}
+/*3 news home*/
+.top_title {
+    font-family: 'Times New Roman', Tahoma, Arial;
+    font-size: 20px;
+    height:27px;
+     width: 285px;
+    color: white;
+    padding-top: 8px;
+    text-align:center;
+    font-weight:bold;
+    background:url('/images/bg_opacity.png');
+    margin-top:-40px;
+    z-index:99;
+    position:absolute;
+}
+.top_item {
+    width: 310px;
+    float: left;
+    margin-top: 40px;
+}
+
+.top_item2 {
+    width: 285px;
+    float: left;
+    margin-top: 40px;
+}
+
+.top_img {
+    width: 285px;
+    height: 200px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 3px gray;
+}
+
+.top_text {
+    height: 85px;
+    width: 285px;
+    overflow: hidden;
+    margin: 10px 0px;
+}
+.button_gray {
+    width: 102px;
+    height: 25px;
+    background: url("/images/bg_button2.jpg");
+    color: #333333;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    padding-top:5px;
+    float: left;
+}
+.btn_gray {
+    width: 102px;
+    height: 30px;
+    background: url("/images/bg_button2.jpg");
+    color: #333333;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    border:0;
+}
+
+    .button_gray:hover, .btn_gray:hover {
+        background: url("/images/bg_button2_hover.jpg");
+    }
+/*===================================Header====================================================*/
+.head_box {
+    background: url("/images/bg_head.jpg");
+    height: 82px;
+}
+
+.head_left {
+    width: 850px;
+    float: left;
+}
+
+.head_right {
+    width: 110px;
+    float: right;
+}
+
+.head_vietnam {
+    width: 23px;
+    height: 23px;
+    background: url("/images/ic_vietnam.jpg");
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.head_english {
+    width: 23px;
+    height: 23px;
+    background: url("/images/ic_english.jpg");
+    float: right;
+    margin-top: 5px;
+}
+
+.head_booking {
+    width: 101px;
+    height: 25px;
+    background: url("/images/bg_button.png");
+    float: right;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 5px;
+    text-shadow: 1px 1px 2px #ea9804;
+}
+
+    .head_booking:hover {
+        background: url("/images/bg_button_hover.png");
+    }
+
+.head_menu {
+    color: white;
+    font-family: 'Times New Roman', Tahoma, Arial;
+    font-size: 14px;
+    margin-top: 20px;
+    float: left;
+    padding-left: 90px;
+}
+
+.head_logo {
+    background: url("/images/logo_para.png");
+    width: 118px;
+    height: 143px;
+    float: left;
+    position:absolute;
+    z-index:9;
+}
+
+/*----------------------------------------footer--------------------------------------*/
+.footer_box {
+    background-color: #2b2c2e;
+    min-height: 213px;
+    padding-bottom: 20px;
+}
+
+.footer_botom {
+    height: 40px;
+    background: url("/images/bg_footer2.png");
+    padding-top: 23px;
+}
+
+.footer_about {
+    width: 430px;
+    float: left;
+}
+
+.footer_img {
+    background: url("/images/img_para.jpg");
+    width: 160px;
+    height: 160px;
+    margin-top: 25px;
+    float: left;
+}
+
+.footer_about_right {
+    width: 240px;
+    float: right;
+}
+
+.footer_about_title {
+    margin-top: 25px;
+    font-family: 'Times New Roman', Tahoma, Arial;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer_category {
+    float: left;
+    margin-left: 80px;
+    width: 140px;
+}
+
+.footer_book {
+    float: left;
+    margin-left: 60px;
+    width: 250px;
+}
+
+.footer_parahotel {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer_phone {
+    background: url("/images/ic_phone.jpg") no-repeat 0px 5px;
+    padding-left: 25px;
+    margin-bottom: 5px;
+}
+
+.footer_address {
+    background: url("/images/ic_address.jpg") no-repeat 0px 5px;
+    padding-left: 25px;
+    margin-bottom: 5px;
+}
+
+.footer_email {
+    background: url("/images/ic_email.jpg") no-repeat 0px 5px;
+    padding-left: 25px;
+}
+
+.footer_link {
+    color: #f6bd22;
+    text-decoration: none;
+}
+
+    .footer_link:hover {
+        text-decoration: underline;
+    }

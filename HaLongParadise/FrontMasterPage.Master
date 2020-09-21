@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontMasterPage.master.cs" Inherits="HaLongParadise.FrontMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ha Long Paradise Hotel</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="/images/logo2.png" rel="shortcut icon" type="image/x-icon" />
+    <%--menu--%>
+    <script src="scripts/function.js"></script>
+    <link href="css/menu.css" rel="stylesheet" />
+
+    <%--slide--%>
+    <link href="/css/camera.css" rel="stylesheet" />
+
+    <script type='text/javascript' src='/scripts/jquery.min.js'></script>
+    <script type='text/javascript' src='/scripts/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='/scripts/camera.min.js'></script>
+
+    
+
+    <script>
+        jQuery(function () {
+
+            jQuery('#camera_wrap_4').camera({
+                height: 'auto',
+                loader: 'bar',
+                pagination: false,
+                thumbnails: true,
+                hover: false,
+                opacityOnGrid: false,
+                imagePath: '../images/'
+            });
+
+        });
+    </script>
+     
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%------------------------------------------header-------------------------------------------------------%>
+        <div class="head_box">
+            <div class="main">
+                <div class="head_left">
+                    <a href="Home.aspx">
+                    <div class="head_logo"></div></a>
+                    <div class="head_menu">
+                        <nav id="navigation">
+                            <ul id="main-menu">
+                                <li><a href="Home.aspx">
+                                    <div class="menu_home"></div>
+                                </a></li>
+                                <asp:Repeater ID="rptMenus" runat="server" OnItemDataBound="rptMenus_ItemDataBound">
+                                    <ItemTemplate>                                       
+                                        <li>
+                                            <a class="parent" href="Detail.aspx?ID=<%#Eval("CategoryId") %>">
+                                                <% if (Session["lang"] != null && Session["lang"].ToString() == "en")
+                                                                    { %> <%# Eval("CategoryNameEng") %><%}
+                                                                    else
+                                                                    { %><%# Eval("CategoryName") %><% }%>
+                                            </a>
+                                            <ul class="sub-menu">
+                                                <asp:Repeater ID="rptSubMenus" runat="server">
+                                                    <ItemTemplate>
+                                                        <li><a href="Detail.aspx?ID=<%#Eval("CategoryId") %>">                                                            
+                                                              <% if (Session["lang"] != null && Session["lang"].ToString() == "en")
+                                                                    { %> <%# Eval("CategoryNameEng") %><%}
+                                                                    else
+                                                                    { %><%# Eval("CategoryName") %><% }%>
+                                                            </a></li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+                                            </ul>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li class="current-menu-item"><a href="#">Vị trí</a></li>
+					<li class="parent">
+						<a href="#">Phòng</a>
+						<ul class="sub-menu">
+							<li><a href="#"><i class="icon-wrench"></i>Phòng Pupper Phòng Pupper</a></li>
+							<li><a href="#"><i class="icon-credit-card"></i>Phòng Deluce</a></li>
+							<li><a href="#"><i class="icon-gift"></i>Phòng Premium</a></li>
+							<li>
+								<a class="parent" href="#"><i class="icon-file-alt"></i> Pages</a>
+								<ul class="sub-menu">
+									<li><a href="#">Full Width</a></li>
+									<li><a href="#">Left Sidebar</a></li>
+									<li><a href="#">Right Sidebar</a></li>
+									<li><a href="#">Double Sidebar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Khuyến mại</a></li>
+                    <li><a href="#">Sự kiện và dịch vụ</a></li>
+					<li><a href="PhotoGallery.aspx">hình ảnh</a></li>--%>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="head_right">
+                     <asp:LinkButton  ID="lbtEnglish" OnClick="lbtEnglish_Click" runat="server">
+                           <span class="head_english"></span></asp:LinkButton>
+                    <asp:LinkButton  ID="lbtVietNam" OnClick="lbtVietNam_Click" runat="server">
+                            <span class="head_vietnam"></span></asp:LinkButton>
+                   
+                    <a href="Booking.aspx" class="head_booking"><asp:Label ID="Label1" Text='<%$ Resources:Resource, DatPhong%>' runat="server" ></asp:Label></a>
+                </div>
+            </div>
+        </div>
+         
+
+          <%--slide--%>
+    <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+
+        <asp:Repeater ID="rptSlide" runat="server">
+            <ItemTemplate>
+                <div data-thumb="/<%#Eval("ImageAlbumUrlSmall") %>" data-src="/<%#Eval("ImageAlbumUrl") %>">
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+    <div class="main">
+        <div class="slide_back"></div>
+        <div class="slide_next"></div>
+    </div>
+    <!-- #camera_wrap_3 -->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <%-----------------------------------------------------------footer------------------------------------------------%>
+        <div class="footer_box">
+            <div class="main">
+                <div class="footer_about">
+                    <div class="footer_img"></div>
+                    <div class="footer_about_right">
+                        <div class="footer_about_title">HA LONG PARADISE HOTEL</div>
+                        <div runat="server" id="txtDescription"></div>
+                    </div>
+                </div>
+                <div class="footer_category">
+                    <div class="footer_about_title"><asp:Label ID="Label3" Text='<%$ Resources:Resource, DanhMuc%>' runat="server" ></asp:Label></div>
+                    <div>
+                       
+                      <asp:Repeater ID="rptFooterMenu" runat="server">
+                                                    <ItemTemplate>
+                                                         <a href="Detail.aspx?ID=<%#Eval("CategoryId") %>" class="footer_link">
+                                                                 <% if (Session["lang"] != null && Session["lang"].ToString() == "en")
+                                                                    { %> <%# Eval("CategoryNameEng") %><%}
+                                                                    else
+                                                                    { %><%# Eval("CategoryName") %><% }%>
+                                                         </a><br />                                                        
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+                        <a href="ContactPage.aspx" class="footer_link"><asp:Label ID="Label4" Text='<%$ Resources:Resource, LienHe%>' runat="server" ></asp:Label></a><br />                                                        
+                    </div>
+                </div>
+                <div class="footer_book">
+                    <div class="footer_about_title"><asp:Label ID="Label2" Text='<%$ Resources:Resource, DatPhong%>' runat="server" ></asp:Label></div>
+                    <div class="footer_parahotel">
+                        Ha Long Paradise Hotel
+                    </div>
+                    <div class="footer_phone" runat="server" id="txtPhone"></div>
+                    <div class="footer_phone" runat="server" id="txtFax"></div>
+                    <div class="footer_address" runat="server" id="txtAddress"></div>
+                    <div class="footer_email"><a href="#" class="footer_link" runat="server" id="txtEmail"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_botom">
+            <div class="main">
+                © Copyright 2014 <a href="http://www.halongparadise.org/" rel="nofollow" class="footer_link">Halongparadise.org</a>  -  Design by <a href="http://itone.com.vn/" class="footer_link">itone.com.vn</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
