@@ -22,7 +22,6 @@ namespace HaLongParadise
                     LoadSlideImage(tmp);
                 else//hiển thị theo trang chủ
                     LoadSlideImage(0);
-                //Download source code mien phi tai Sharecode.vn
                 //info
                 Contact info = db.Contacts.FirstOrDefault();
                 if (info != null)
