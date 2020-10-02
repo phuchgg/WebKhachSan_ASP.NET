@@ -30,7 +30,6 @@ namespace HaLongParadise
                     {
                         txtInfo.Text = info.Description;
                     }
-                    //Download source code mien phi tai Sharecode.vn
                 }
             }
         }
